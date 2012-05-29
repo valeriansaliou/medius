@@ -1,6 +1,5 @@
-
-
 \documentclass{article}
+\usepackage{hyperref}
 
 \usepackage[utf8]{inputenc} %% Pour pouvoir utiliser les caractères accentués
 \usepackage{graphicx} %% Pour pouvoir inclure des graphiques
@@ -25,8 +24,93 @@
 
 \subsection{Lancement du jeu}
 
+Pour utiliser Medius, vous devez disposer de Python (version 2.7 conseillée) avec Pyglet (pour le jeu en lui-même) et AVBin (pour le son).
+\newline\newline
+Une fois ces librairies installées, ouvrez un terminal, puis entrez dans le répertoire de Medius (utilisez la commande cd).
+\newline\newline
+Enfin, exécutez python main.py pour lancer le jeu.
+\newline\newline
 
 \subsection{Utilisation du jeu}
 
+Medius a été conçu pour être relativement intuitif et simple d'utilisation.
+\newline\newline
+Au lancement du jeu, vous obtiendez le menu général du jeu, vous permettant d'accéder à la liste des niveaux (bouton Jouer), de configurer votre jeu (cases à cocher) et d'obtenir quelques informations (bouton orné d'un i).
+\newline\newline
+Pour lancer un niveau, cliquez sur Jouer. Vous arriverez dans l'écran de sélection de niveau. Vous avez à présent le choix entre bactérie et virus.
+\newline\newline
+
+\subsection{Prise en main du jeu}
+
+Au cours du jeu, vous incarnerez un organisme qu'on appelle phagocyte. Le maniement se fait avec les flèches de votre clavier.
+\newline\newline
+Votre objectif est d'enrayer l'infection bactérienne ou virale. Vous devez toucher les organismes étrangers (en vert) pour les éliminer.
+\newline\newline
+En parallèle, vous devez établir une stratégie pour empêcher la destruction totale de vos cellules (sur les côtés gauche et droit).
+\newline\newline
+Dans le cas général, les cellules et bactéries se divisent aléatoirement par mitose.
+\newline\newline
+Les bactéries dégagent des projectiles (toxines) qui détruisent vos cellules et vous détruisent (vous réapparaissez alors au centre de la zone de jeu), tandis que les virus se servent de vos cellules pour se diviser en 3 après un court instant.
+\newline\newline
+
+\subsection{Aperçu du jeu}
+
+\centerline{\includegraphics[height=7.5cm]{game_help.png}}
+\strut\newline
+
+\section{Progresser dans le jeu}
+
+\subsection{Niveaux de difficulté}
+
+Medius propose 3 niveaux de difficulté : du plus facile (1) au plus difficile (3).
+\newline\newline
+Le mode facile (1) vous permet de comprendre le fonctionnement du jeu.
+Le mode intermédiaire (2) est accessible à tout joueur comprenant le jeu.
+Le mode difficile (3) vous demande de la stratégie, car il est impossible de gagner sans réflexion préalable sur votre méthode d'action.
+\newline\newline
+
+\subsection{Conseils de stratégies}
+
+En mode difficile, vous devez utiliser les rebonds sur les cellules latérales afin d'effectuer des changements de trajectoire rapides.
+\newline\newline
+Aussi, les organismes ennemis iront plus vite que votre phagocyte. Vous devrez donc les éliminer en les prenant à l'inverse de leur trajectoire, en arrivant face à eux.
+\newline\newline
+Évitez de passer à côté des cellules dans le cas des bactéries. En effet, celles-ci tirent en votre direction, il est donc possible qu'un projectile atteigne une cellule qui se trouve derrière vous.
+\newline\newline
+Évitez que les virus dont une cellule est dans leur trajectoire ne l'atteigne, car celui-ci, en plus d'éliminer la cellule, s'en servira pour se diviser en 3.
+\newline\newline
+
+\section{Résoudre les problèmes}
+
+\subsection{Je n'ai pas de son !}
+
+Le son est peut-être désactivé (vérifiez si les 2 cases sont cochées dans le menu général).
+\newline\newline
+Votre configuration ne peut peut-être pas lire le son. Veuillez installer AVBin.
+\newline\newline
+
+\subsection{Mon jeu est lent !}
+
+Votre ordinateur n'a peut-être pas suffisamment de puissance disponible. Essayez de fermer les applications consommatrices de ressources puis réessayez.
+\newline\newline
+
+\subsection{Je ne vois pas toute la fenêtre de jeu !}
+
+Votre résolution n'est pas suffisante. Medius requiert au moins une résolution de 1024x768 afin d'être entièrement visible.
+\newline\newline
+
+\subsection{Mes paramètres ne sont pas sauvegardés !}
+
+Medius ne doit pas avoir les droits d'écriture dans sa base de donnée intégrée. Donnez les droits complets à tout utilisateur (chmod 777) d'écrire et de lire sur le dossier ./db et son contenu.
+\newline\newline
+
+\section{Annexes}
+
+\subsection{Développement du jeu}
+
+Le dépôt de développement de Medius est disponible sur Internet à l'adresse \href{https://github.com/Vanaryon/medius}{https://github.com/Vanaryon/medius}
+\newline\newline
+Vous pouvez aussi y télécharger la dernière version du jeu.
+\newline\newline
 
 \end{document}
