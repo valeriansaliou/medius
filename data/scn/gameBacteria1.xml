@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<medius xmlns="medius:xml:game">
+	<FENETRE width="1024" height="600" />
+	<scene name="game" >
+
+		<mode name="bacteria">
+
+			<item nombreEnemiLimite="4" />
+			<item intervalDeplacement="5" />
+			<item DT_MITOSE_MAX="25" />
+			<item DT_MITOSE_MIN="-25" />
+			<item enemiPopulationLimite="5"/>
+			<item musique="03" />
+
+			<celluleMap>
+				<item x="50" y="50" presence="1" indice="0" cible1="1" cible2="-1" />
+				<item x="50" y="150" presence="1" indice="1" cible1="0" cible2="2" />
+				<item x="50" y="250" presence="1" indice="2" cible1="1" cible2="3" />
+				<item x="50" y="350" presence="1" indice="3" cible1="2" cible2="4" />
+				<item x="50" y="450" presence="1" indice="4" cible1="3" cible2="5" />
+				<item x="50" y="550" presence="1" indice="5" cible1="4" cible2="-1" />
+				<item x="974" y="50" presence="1" indice="6" cible1="7" cible2="-1" />
+				<item x="974" y="150" presence="1" indice="7" cible1="6" cible2="8" />
+				<item x="974" y="250" presence="1" indice="8" cible1="7" cible2="9" />
+				<item x="974" y="350" presence="1" indice="9" cible1="8" cible2="10" />
+				<item x="974" y="450" presence="1" indice="10" cible1="9" cible2="11" />
+				<item x="974" y="550" presence="1" indice="11" cible1="10" cible2="-1" />
+			</celluleMap>
+
+			<image projectile="./data/img/game/projectile.png" />
+			<image bacteria="./data/img/game/bacteria.png" />
+			<image virus='./data/img/game/virus.png' />
+			<image cellule="./data/img/game/cell.png" />
+			<image Phagocyte="./data/img/game/phagocyte.png" />
+			<image cellule1="./data/img/game/cell.inoculate.1.png" />
+			<image cellule2="./data/img/game/cell.inoculate.2.png" />
+			<image cellule3="./data/img/game/cell.inoculate.3.png" />
+
+			<objet>
+				<Phagocyte
+					 x="487" 
+					 y="275" 
+					 rayon="40"
+					 vitesse="0" 
+					 angle="0" 
+					 pushUp="0" 
+					 pushDown="0" 
+					 pushLeft="0" 
+					 pushRight="0" 
+					 limiteVitesse="5" 
+					 acceleration="0.25" 
+					 anglePlus="16" 
+					 mitoseTime="None" 
+					 projectileTime="None" 
+				/>
+				<cellule
+					 x="None" 
+					 y="None"
+					 rayon="50"			 
+					 vitesse="0" 
+					 angle="0" 
+					 pushUp="0" 
+					 pushDown="0" 
+					 pushLeft="0" 
+					 pushRight="0" 
+					 limiteVitesse="0" 
+					 acceleration="0" 
+					 anglePlus="0" 
+					 mitoseTime="200" 
+					 projectileTime="200" 
+					 lyseTime="0"
+
+				/>
+				<bacteria
+					 x="None" 
+					 y="None"
+					 rayon="25"
+					 vitesse="1" 
+					 angle="0" 
+					 pushUp="1" 
+					 pushDown="0" 
+					 pushLeft="0" 
+					 pushRight="0" 
+					 limiteVitesse="2" 
+					 acceleration="0" 
+					 anglePlus="25" 
+					 mitoseTime="350" 
+					 projectileTime="400" 
+				/>
+				<projectile
+					 x="None" 
+					 y="None"
+					 rayon="5"
+					 vitesse="1" 
+					 angle="0" 
+					 pushUp="1" 
+					 pushDown="0" 
+					 pushLeft="0" 
+					 pushRight="0" 
+					 limiteVitesse="2" 
+					 acceleration="0" 
+					 anglePlus="0" 
+					 mitoseTime="None" 
+					 projectileTime="None" 
+				/>
+			</objet>
+		</mode>
+	</scene>
+</medius>

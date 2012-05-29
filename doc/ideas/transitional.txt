@@ -1,0 +1,9 @@
+Idées combats
+-------------
+
+Cas des "astéroïdes"
+--------------------
+
+	-> Lors de sortie du vaisseau amiral, laisser un moment d'avancement vide d'ennemis avant que le phagocyte ne rejoigne les ennemis
+	-> Le but est d'éviter la collision avec les cellules "amies" du corps (phagocyte alors détruit), passant comme des astéroïdes dans l'espace
+	-> La relation scientifique : éviter les réactions auto-immunes (système immunitaire attaque les cellules du corps humain), problème connu en Bretagne (génétique)

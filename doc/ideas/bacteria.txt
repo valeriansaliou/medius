@@ -1,0 +1,9 @@
+Idées combats
+-------------
+
+Cas de la bactérie
+------------------
+
+	-> On contrôle un phagocyte
+	-> Les anticorps sont tirées automatiquement et aléatoirement par les LT du corps situées en latéral
+		-> Une bactérie est touchée par un anticorps, elle est ralentie de plus en plus

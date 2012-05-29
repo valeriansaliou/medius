@@ -1,0 +1,62 @@
+\section{Acteurs}
+%%%%%%%%%%%%%%%%%%%%%
+L'appellation "acteurs du jeu" désigne :
+\begin{itemize}
+\item élève lycéen (Terminale S SVT)
+\item élève collégien (Biologie)
+\end{itemize}
+
+\section{Besoins du client}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Nous avons besoin de développer une application qui permette de s'initier - sans aucune notion particulière - au fonctionnement du système immunitaire dans le corps humain.
+\\
+\\
+De même pour les utilisateurs avancés, le jeu doit permettre d'aller plus loin dans l'apprentissage.
+\begin{itemize}
+\item lancer le jeu
+\item apprendre à combattre une infection bactériologique
+\item apprendre à combattre un virus
+\item aller plus loin dans l'apprentissage
+\end{itemize}
+
+\section{Récits d'utilisation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{RU 01 : lancement du jeu}
+{\bf En tant que} joueur
+{\bf je souhaite} pouvoir lancer le jeu
+{\bf afin d'} apprendre le fonctionnement du système immunitaire humain - tout en m'amusant.
+
+\subsection{RU 02 : combat contre une bactérie}
+{\bf En tant que} joueur
+{\bf je souhaite} pouvoir combattre une bactérie
+{\bf afin de} comprendre la réaction spécifique du corps face à une bactérie.
+
+\subsection{RU 03 : combat contre un virus}
+{\bf En tant que} joueur
+{\bf je souhaite} pouvoir combattre un virus
+{\bf afin de} comprendre la réaction spécifique du corps face à un virus.
+
+\subsection{RU 04 : obtenir des informations}
+{\bf En tant que} joueur
+{\bf je souhaite} pouvoir obtenir des informations détaillées à propos d'un agent pathogène.
+{\bf afin d'}aller plus loin dans mon apprentissage
+
+\section{Rappels des fonctionnalités}
+\begin{itemize}
+	\item lancer le jeu
+	\item configurer le son
+	\item sélectionner un niveau
+	\item lancer la partie
+	\item accéder aux fiches information
+\end{itemize}
+
+\section{Scénario d'utilisation}
+
+\includegraphics[scale=0.4]{Images/scenario.jpg}
+
+\section{Contraintes}
+Nous allons devoir gérer les types d'agents pathogènes à combattre. En effet, selon que ceux-ci soient des virus ou des bactéries, la marche à suivre pour les éliminer n'est pas la même.
+\\
+\\
+Les mécanismes biologiques en jeu sont différents mais font intervenir les mêmes acteurs. Il faudra donc adapter leur comportement - et la réaction du jeu qui y est associée - en fonction de l'ennemi combattu.
+Le jeu sera d'abord développé pour le combat contre des bactéries, techniquement plus simple à mettre en oeuvre.

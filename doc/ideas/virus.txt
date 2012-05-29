@@ -1,0 +1,26 @@
+Idées combats
+-------------
+
+Cas du virus
+------------
+
+- Version 1 :
+	-> Plasmocytes : représentés sous la forme de cercles
+	-> Anticorps : représentés sous la forme de Y à bras
+	
+	-> Bactérie touchée par un anticorps : bactérie neutralisée, puis quand neutralisée assez, on contrôle le phagocyte et on élimine (attraper) les virus neutralisés
+	-> Séquence du boss final pour activer la mémoire (appuyer sur flèches quand on passe sous un curseur, du style Guitar Hero), si ok au final, mémoire activée & niveau terminé
+
+
+- Version 2 :
+	-> En mode virus :
+		-> Phagocyte : contrôlé par le joueur, "gobe" les virus et les virions lorsque le joueur presse la touche espace (sa "bouche" s'ouvre pendant 1s). Si collision latérale, arrière ou avant (bouche fermée), phagocyte détruit, et un autre "décolle" de la base (nombre de phagocytes illimité, on perd juste du temps et les virus prolifèrent jusqu'à un seuil critique)
+		-> Lymphocytes T : constituent les parois latérales, sécrètent des anticorps aléatoirement, mais en direction des cibles (virus) avec déplacement rectiligne
+		-> Virus : déplacement aléatoire, confus. Sécrète virions, par pulsations. Par exemple, à t=1s un virus va libérer X virions tout autour de lui, en cercle. Les virions seront projetés de manière rectiligne et en mitraillant. Temps entre les pulsations aléatoire, nombre de virions sécrétés par pulsation aléatoire, de 1 ligne à 5. Le virus est paralysé pendant 5s à 10s (aléatoire) si touché par un anticorps, peut être "gobé" à ce moment là
+		-> Virions : se déplace sans cible, de manière rectiligne. Quand touche lymphocyte T, le transforme directement en virus, reste immobile, procède à une mitose, puis les 2 ou 4 virus (aléatoire, toujours des paires) générés par la mitose se décollent de la paroi et entrent en jeu
+	
+	-> En général : gestion du combat complètement aléatoire, pour qu'aucune partie ne se ressemble. La difficulté peut donc varier d'un jeu à un autre
+	
+	-> Fin de la partie :
+		-> Joueur gagne : plus aucun virus ne reste
+		-> Virus gagne : plus de lymphocytes T

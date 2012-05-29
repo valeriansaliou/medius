@@ -1,0 +1,47 @@
+%\documentclass{article}
+\documentclass[11pt, book]{report}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{multimedia}
+
+\title{{\Huge \bf ENIB 2012 : S2P  MDD} \\
+\vspace*{2cm}
+{\Huge \bf Medius} \\
+\vspace*{2cm}
+\centerline{\includegraphics[height=3cm]{Images/logomedius.jpg}}
+}
+\author{Valérian Saliou (v1saliou) \& Kwon-Young Choi (k1choi)}
+
+%\date{La date}
+\date\today 
+
+\begin{document}
+\maketitle{}
+
+%\tableofcontents{}
+%\listoffigures{}
+%\listoftables{}
+
+\part[Analyse]{Besoins, récits et fonctionnalités}
+
+\chapter[Besoins]{Expression des besoins}
+\include{besoin}
+\chapter[Fonctionnalités]{Acteurs, besoins et récits d'utilisation}
+\include{fonctionnalite}
+
+\part[Conception]{Livraisons et versions}
+
+\chapter[Livraisons]{Livraisons}
+%\include{livraison}
+\include{versions}
+%\chapter[Versions]{Versions}
+%\include{version-1}
+%\include{version-2}
+%\include{version-3}
+%\include{version-4}
+\chapter[Conclusions]{Conclusions \& Perspectives}
+\include{conclusion}
+
+\end{document}

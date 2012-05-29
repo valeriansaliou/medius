@@ -1,0 +1,135 @@
+\section{Première version}
+Documentation de la première version du projet
+\subsection{Fonctionnalités à traiter}
+\begin{itemize}
+	\item donner un thème
+	\item créer un musée
+	\item voir des tableaux
+	\item se déplacer dans un musée 
+	\item passer à une autre pièce
+	\item donner une explication relative à un tableau
+\end{itemize}
+\subsection{Analyse noms-verbes}
+Liste de noms
+\begin{itemize}
+	\item thème
+	\item tableau
+	\item salle
+	\item musée
+	\item explications
+\end{itemize}
+Liste des verbes
+\begin{itemize}
+	\item donner (un thème)
+	\item créer (un musée)
+	\item voir (des tableaux)
+	\item se déplacer (dans un musée)
+	\item donner (une explication)
+\end{itemize}
+
+\newpage
+
+\subsection{Modules}
+
+\begin{table}[ht]
+\center
+\begin{tabular}{|l|p{11cm}|}
+\hline
+{\tt vec3.py} & contient les fonctions permettant de créer des vecteurs et de les manipuler \\
+\hline
+{\tt configuration.py} & contient les variables et fonctions permettant la configuration du jeu \\
+\hline
+{\tt tableau.py} & contient les  fonctions permettant de charger les tableaux,
+les explications afférentes, d'afficher les tableaux et les explications \\
+\hline
+{\tt salle.py} & contient les fonctions permettant la création des salles et le passage de salle en salle \\
+\hline
+{\tt musee.py} & contient les fonctions permettant de créer un musée et de le visiter \\
+\hline
+{\tt visiteur.py} & contient les variables décrivant le visiteur (caméra, compétences, ...)
+\\
+\hline
+{\tt main.py} & script d'appel des fonctions (en particulier les réactions à des événements)  \\
+\hline
+\end{tabular}
+\caption{Première version : modules \label{tab-mod-v1}}
+\end{table}
+
+\subsection{Description synthétique des fonctions}
+
+\begin{table}[!ht]
+\center
+\begin{tabular}{|l|p{10cm}|}
+\hline
+Nom de la fonction & Rôle de la fonction  \\
+\hline
+\hline
+afficher  &  Affiche ce que voit le joueur et donne des explications ainsi que le score
+\\
+\hline
+placerLeVisiteur &  Paramètre la caméra virtuelle openGL \\
+\hline
+dessinerLeMusee  & Dessine la totalité du musée \\
+\hline
+dessinerUneSalle &  Dessine la totalité d'une salle \\
+\hline
+dessinerUnTableau  & Dessiner un tableau  \\
+\hline
+donnerUneExplication  &  \\
+\hline
+notifierUnTableau  &  \\
+\hline
+estAttentifAuTableau &  Détecte si le joueur regarde de façon attentive le tableau
+\\
+\hline
+estProcheDunTableau  &  Détecte si le joueur passe à proximité d'un tableau \\
+\hline
+getPositionCamera &  Renvoie la position du point focal de la caméra virtuelle \\
+\hline
+getCibleCamera  &  Renvoie un point visé par la caméra\\
+\hline
+\end{tabular}
+\caption{Première version : description\label{tab-desc-v1}}
+\end{table}
+\subsection{Arbre des appels de fonctions}
+\subsection{Description détaillée des fonctions}
+\begin{description}
+	\item[Fonction] : {\tt afficher}
+	\item[Module] : {\tt main.py}
+	\item[Rôle] :Affiche ce que voit le joueur et donne des explications ainsi que le score. Met en \oe uvre la fonctionnalité « voir des tableaux ».
+	\item[Entrées]  : rien
+	\item[Résultat] : rien
+	\item[Variables globales] : {\tt camera, scene}
+	\item[Préconditions] : rien
+	\item[Calcul] : la mémoire vidéo est modifiée
+\begin{verbatim}
+placerLeVisiteur(getPositionCamera(),getCibleCamera())
+dessinerLeMusee()
+\end{verbatim}
+\vspace*{0.5cm}
+\end{description}
+\begin{description}
+	\item[Fonction] : {\tt placerLeVisiteur}
+	\item[Module] : {\tt visiteur.py}
+	\item[Rôle]  :Paramètrer la caméra virtuelle openGL
+	\item[Entrées] :
+	\begin{itemize}
+		\item  {\tt position : vec3}
+		\item  {\tt cible : vec3}
+	\end{itemize}
+	\item[Résultat] : rien
+	\item[Variables globales] : {\tt camera, scene}
+	\item[Préconditions] : {\tt distance(position, cible) > 0.1}
+	\item[Calcul] : le contexte openGL est modifié
+\end{description}
+\vspace*{0.5cm}
+\begin{description}
+	\item[Fonction] : {\tt getPositionCamera}
+	\item[Module] : {\tt visiteur.py}
+	\item[Rôle] : renvoie la position du visiteur
+	\item[Entrées] : rien
+	\item[Résultat] : {\tt vec3}
+	\item[Variables globales] : {\tt camera}
+	\item[Préconditions] : rien
+	\item[Calcul] : le résultat est la position du visiteur dans la scène
+\end{description}
